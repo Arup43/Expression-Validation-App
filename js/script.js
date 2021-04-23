@@ -8,15 +8,30 @@ function validate(e){
     switch (expression) {
         case 'Email':
             input = prompt('Enter your Email: ')
-            validateEmail(input)
+            while(input===''){
+                input = prompt('Enter your Email: ')
+            }
+            if(input !== null) {
+                validateEmail(input)
+            }
             break
         case 'Phone Number':
             input = prompt('Enter your Phone Number: ')
-            validatePhoneNumber(input)
+            while(input===''){
+                input = prompt('Enter your Phone Number: ')
+            }
+            if(input !== null) {
+                validatePhoneNumber(input)
+            }
             break
         case 'Post Code':
             input = prompt('Enter your Post Code: ')
-            validatePostCode(input)
+            while(input===''){
+                input = prompt('Enter your Post Code: ')
+            }
+            if(input !== null) {
+                validatePostCode(input)
+            }
             break
     }
     e.preventDefault()
